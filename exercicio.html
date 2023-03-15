@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício</title>
+    <style>
+body { background-color: pink;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content:center ;
+    margin: 0px}
+        .conteudo{
+            width: 950px;
+            height: 630px;
+            position: relative;
+            background-color: #ff0095;
+        }
+
+        .torneira {
+            Top: 0px;
+            Left: 0px;
+            Position: absolute;
+            z-index: 1;
+        }
+        .gota{
+            z-index: 0;
+            top: 200px;
+            left: 300px;
+            position: absolute;
+            
+        }
+        @keyframes descer-e-ficar-transparente {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+
+.gota {
+  animation-name: descer-e-ficar-transparente;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+  
+  
+    </style>
+</head>
+<body>
+    <div class="conteudo">
+    <div class="torneira">
+        <img src="torneira.png">
+    </div>
+    <div class="gota">
+        <img src="gota.png">
+    </div>
+</div>
+
+    
+</body>
+</html>
